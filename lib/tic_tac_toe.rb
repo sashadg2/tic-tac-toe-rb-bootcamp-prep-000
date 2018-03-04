@@ -52,6 +52,7 @@ def turn_count(board)
     if element != "" && element != " " && element != nil
       count = count + 1
     end
+    return count
 end
 
 def won?(board)
