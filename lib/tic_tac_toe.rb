@@ -1,5 +1,13 @@
 
 # Helper Method
+
+def valid_move?(arr,pos)
+  if (pos >= 0 && pos <= 8 && position_taken?(arr,pos) == false)
+    return true
+  else return false
+  end
+end
+
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
