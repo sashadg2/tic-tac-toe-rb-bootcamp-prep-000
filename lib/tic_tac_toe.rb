@@ -46,6 +46,14 @@ def turn(board)
   end
 end
 
+def turn_count(board)
+  count = 0
+  board.each do |element|
+    if element != "" && element != " " && element != nile
+      count = count + 1
+    end
+end
+
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
