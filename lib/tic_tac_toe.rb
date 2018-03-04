@@ -21,6 +21,10 @@ def input_to_index(user_input)
   user_input = user_input.to_i - 1
 end
 
+def move(arr,position,value="X")
+  arr[position] = value
+end
+
 def valid_move?(arr,pos)
   if (pos >= 0 && pos <= 8 && position_taken?(arr,pos) == false)
     return true
