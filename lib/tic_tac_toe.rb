@@ -25,6 +25,10 @@ def move(arr,position,value="X")
   arr[position] = value
 end
 
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " ")
+end
+
 def valid_move?(arr,pos)
   if (pos >= 0 && pos <= 8 && position_taken?(arr,pos) == false)
     return true
@@ -32,9 +36,7 @@ def valid_move?(arr,pos)
   end
 end
 
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
-end
+
 
 # Define your WIN_COMBINATIONS constant
 
