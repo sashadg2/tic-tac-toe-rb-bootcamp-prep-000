@@ -36,6 +36,15 @@ def valid_move?(arr,pos)
   end
 end
 
+def turn(board)
+  puts "Where would you like to go?"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?
+    board[index] = "X"
+  else turn(board)
+  end
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
